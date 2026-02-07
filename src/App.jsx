@@ -96,10 +96,10 @@ function App() {
   // --- Game Logic ---
 
   useEffect(() => {
-    if (imageSrc && !isGameActive) {
+    if (imageSrc) {
       startGame();
     }
-  }, [imageSrc, gridSize]); // Auto restart if grid changes
+  }, [imageSrc, gridSize]); // Auto restart if grid changes or image loads
 
   // Timer
   useEffect(() => {
