@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { FaCloudUploadAlt, FaPuzzlePiece, FaSync, FaEye, FaRegEyeSlash, FaHome } from 'react-icons/fa';
 import './index.css';
+import defaultRobot from './assets/default_robot.jpg';
 
 const Tile = ({ id, currentPos, correctPos, imageSrc, gridSize, onClick, isEmpty }) => {
   if (isEmpty) return <div className="w-full h-full border-2 border-dashed border-gray-300 rounded-md"></div>;
@@ -62,8 +63,7 @@ const Modal = ({ show, onPlayAgain, moves, time }) => {
 };
 
 function App() {
-  // Import or use path directly if in public, but for src assets use import
-  const [imageSrc, setImageSrc] = useState("/src/assets/default_robot.jpg"); // Default Image
+  const [imageSrc, setImageSrc] = useState(defaultRobot); // Use imported image
   const [gridSize, setGridSize] = useState(3);
   const [gameState, setGameState] = useState([]); // Array of tile IDs
   const [emptyIndex, setEmptyIndex] = useState(-1);
