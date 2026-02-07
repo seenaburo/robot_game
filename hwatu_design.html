@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hwatu Design Preview</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .month-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            width: 70px;
+            /* 35mm * 2 */
+            height: 106px;
+            /* 53mm * 2 */
+            border-radius: 6px;
+            border: 2px solid #000;
+            background-color: #e53935;
+            /* Red Back */
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            background-clip: padding-box;
+        }
+
+        .card-face {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            box-sizing: border-box;
+            border: 2px solid #000;
+            /* Inner border characteristic of Hwatu */
+            border-radius: 4px;
+            /* Inner radius */
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Common Elements */
+        .gwang-symbol {
+            fill: red;
+            font-family: "serif";
+            font-weight: bold;
+            font-size: 14px;
+            text-anchor: middle;
+            filter: drop-shadow(0px 0px 1px white);
+        }
+
+        .card-label {
+            margin-top: 5px;
+            text-align: center;
+            color: #555;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>화투 디자인 시안 (벡터 그래픽)</h1>
+
+    <h2>1월: 송학 (松鶴)</h2>
+    <div class="month-container">
+        <!-- 1. 광 (Gwang) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Sun -->
+                        <circle cx="35" cy="15" r="10" fill="red" />
+                        <!-- Hill -->
+                        <path d="M0,80 Q35,60 70,80 L70,106 L0,106 Z" fill="#c00" />
+                        <!-- Pine Tree -->
+                        <path d="M35,25 L35,90" stroke="#000" stroke-width="2" /> <!-- Trunk -->
+                        <path d="M35,40 L10,30 M35,50 L60,40 M35,60 L15,55 M35,70 L60,65" stroke="#000"
+                            stroke-width="1.5" /> <!-- Branches -->
+                        <!-- Pine Needles (Abstract Green Blobs) -->
+                        <path d="M10,25 Q20,15 30,25 Q20,35 10,25" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M40,35 Q50,25 60,35 Q50,45 40,35" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M15,50 Q25,40 35,50 Q25,60 15,50" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M45,60 Q55,50 65,60 Q55,70 45,60" fill="green" stroke="black" stroke-width="0.5" />
+                        <!-- Crane -->
+                        <path d="M50,20 Q60,10 65,20 Q60,30 50,20" fill="white" stroke="black" stroke-width="0.5" />
+                        <!-- Body -->
+                        <circle cx="63" cy="18" r="1" fill="black" /> <!-- Eye -->
+                        <path d="M65,20 L70,18" stroke="black" stroke-width="0.5" /> <!-- Beak -->
+                        <!-- Gwang Symbol -->
+                        <circle cx="55" cy="85" r="8" fill="red" stroke="white" stroke-width="1" />
+                        <text x="55" y="89" fill="white" font-size="10" text-anchor="middle" font-weight="bold">光</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">광 (송학)</div>
+        </div>
+
+        <!-- 2. 홍단 (Ribbon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Pine Tree -->
+                        <path d="M35,10 L35,100" stroke="#000" stroke-width="2" />
+                        <path d="M35,30 L10,20 M35,50 L60,40 M35,70 L15,65 M35,90 L60,85" stroke="#000"
+                            stroke-width="1.5" />
+                        <!-- Pine Needles -->
+                        <path d="M10,15 Q20,5 30,15 Q20,25 10,15" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M40,35 Q50,25 60,35 Q50,45 40,35" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M15,60 Q25,50 35,60 Q25,70 15,60" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M45,80 Q55,70 65,80 Q55,90 45,80" fill="green" stroke="black" stroke-width="0.5" />
+                        <!-- Ribbon -->
+                        <path d="M15,20 L15,50 L25,55 L35,50 L35,20 L25,15 Z" fill="red" stroke="black"
+                            stroke-width="0.5" /> <!-- Folded ribbon shape simplified -->
+                        <rect x="20" y="10" width="30" height="15" fill="red" stroke="black" stroke-width="0.5"
+                            transform="rotate(-15 35 17)" />
+                        <text x="35" y="20" fill="white" font-size="8" text-anchor="middle"
+                            transform="rotate(-15 35 20)">홍단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">홍단</div>
+        </div>
+
+        <!-- 3. 피 (Pi) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Pine Tree -->
+                        <path d="M35,10 L35,106" stroke="#000" stroke-width="2" />
+                        <path d="M35,30 L10,20 M35,45 L60,35 M35,65 L15,60 M35,85 L60,80" stroke="#000"
+                            stroke-width="1.5" />
+                        <!-- Pine Needles -->
+                        <path d="M10,15 Q20,5 30,15 Q20,25 10,15" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M40,30 Q50,20 60,30 Q50,40 40,30" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M15,55 Q25,45 35,55 Q25,65 15,55" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M45,75 Q55,65 65,75 Q55,85 45,75" fill="green" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피 1</div>
+        </div>
+
+        <!-- 4. 피 (Pi) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Pine Tree -->
+                        <path d="M35,10 L35,106" stroke="#000" stroke-width="2" />
+                        <path d="M35,25 L10,15 M35,50 L60,40 M35,75 L15,70 M35,95 L60,90" stroke="#000"
+                            stroke-width="1.5" />
+                        <!-- Pine Needles -->
+                        <path d="M10,10 Q20,0 30,10 Q20,20 10,10" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M40,35 Q50,25 60,35 Q50,45 40,35" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M15,65 Q25,55 35,65 Q25,75 15,65" fill="green" stroke="black" stroke-width="0.5" />
+                        <path d="M45,85 Q55,75 65,85 Q55,95 45,85" fill="green" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피 2</div>
+        </div>
+    </div>
+
+    <h2>3월: 벚꽃 (桜)</h2>
+    <div class="month-container">
+        <!-- 1. 광 (Gwang) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Crown/Curtain -->
+                        <rect x="5" y="70" width="60" height="30" fill="white" stroke="black" stroke-width="1" />
+                        <path d="M10,75 L10,95 M20,75 L20,95 M30,75 L30,95 M40,75 L40,95 M50,75 L50,95 M60,75 L60,95"
+                            stroke="black" stroke-width="2" />
+                        <path d="M5,85 L65,85" stroke="black" stroke-width="1" />
+                        <!-- Cherry Blossoms -->
+                        <circle cx="20" cy="20" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="35" cy="30" r="6" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="20" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="25" cy="45" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="45" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+
+                        <path d="M10,60 Q35,40 60,60" fill="none" stroke="black" stroke-width="1" /> <!-- Branch -->
+                        <!-- Gwang Symbol -->
+                        <circle cx="55" cy="85" r="8" fill="red" stroke="white" stroke-width="1" />
+                        <text x="55" y="89" fill="white" font-size="10" text-anchor="middle" font-weight="bold">光</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">광 (벚꽃)</div>
+        </div>
+
+        <!-- 2. 홍단 (Ribbon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Cherry Blossoms -->
+                        <path d="M35,100 L35,20" stroke="black" stroke-width="1.5" />
+                        <circle cx="20" cy="30" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="35" cy="20" r="6" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="30" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="10" width="30" height="15" fill="red" stroke="black" stroke-width="0.5"
+                            transform="rotate(-15 35 17)" />
+                        <text x="35" y="20" fill="white" font-size="8" text-anchor="middle"
+                            transform="rotate(-15 35 20)">홍단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">홍단</div>
+        </div>
+        <!-- 3. 피 (Pi 1) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Cherry Blossoms -->
+                        <path d="M35,100 Q15,60 35,20" stroke="black" stroke-width="1.5" />
+                        <circle cx="20" cy="30" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="35" cy="20" r="6" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="30" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="25" cy="50" r="4" fill="pink" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피 1</div>
+        </div>
+
+        <!-- 4. 피 (Pi 2) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Cherry Blossoms -->
+                        <path d="M35,100 Q55,60 35,20" stroke="black" stroke-width="1.5" />
+                        <circle cx="25" cy="35" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="35" cy="20" r="6" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="35" r="5" fill="pink" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="55" r="4" fill="pink" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피 2</div>
+        </div>
+    </div>
+
+    <h2>2월: 매조 (梅鳥)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Bird) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Branch -->
+                        <path d="M-5,80 Q25,60 45,50" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M45,50 L60,40" stroke="black" stroke-width="1.5" />
+                        <!-- Flowers -->
+                        <circle cx="15" cy="70" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="30" cy="55" r="3" fill="white" stroke="black" stroke-width="0.5" />
+                        <circle cx="65" cy="35" r="3" fill="red" stroke="black" stroke-width="0.5" />
+                        <!-- Bird -->
+                        <path d="M35,35 Q45,25 55,35 Q65,30 60,40 Q55,50 40,45 Z" fill="#eec" stroke="black"
+                            stroke-width="0.5" />
+                        <circle cx="53" cy="33" r="1.5" fill="black" />
+                        <path d="M60,35 L65,37" stroke="black" stroke-width="0.5" /> <!-- Beak -->
+                        <path d="M42,45 L42,52" stroke="black" stroke-width="1" /> <!-- Leg -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (매조)</div>
+        </div>
+        <!-- 2. 홍단 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M-5,100 Q35,60 75,20" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M35,60 L50,45" stroke="black" stroke-width="1.5" />
+                        <!-- Flowers -->
+                        <circle cx="20" cy="75" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="50" r="3" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="60" cy="25" r="4" fill="white" stroke="black" stroke-width="0.5" />
+                        <!-- Ribbon -->
+                        <path d="M20,20 L20,50 L30,55 L40,50 L40,20 L30,15 Z" fill="red" stroke="black"
+                            stroke-width="0.5" transform="rotate(30 30 35)" />
+                        <text x="30" y="30" fill="white" font-size="8" text-anchor="middle"
+                            transform="rotate(30 30 35)">홍단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">홍단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M-5,100 Q35,50 75,10" stroke="black" stroke-width="2" fill="none" />
+                        <circle cx="20" cy="75" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="50" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="65" cy="20" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M75,100 Q35,50 -5,10" stroke="black" stroke-width="2" fill="none" />
+                        <circle cx="50" cy="75" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="25" cy="50" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="5" cy="20" r="4" fill="red" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>4월: 흑싸리 (黑萩)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Bird - Cuckoo) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Black Bush hanging down -->
+                        <path d="M5,0 Q15,40 35,50" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M65,0 Q55,40 35,50" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <!-- Leaves -->
+                        <circle cx="10" cy="20" r="4" fill="black" />
+                        <circle cx="20" cy="35" r="4" fill="black" />
+                        <circle cx="50" cy="35" r="4" fill="black" />
+                        <circle cx="60" cy="20" r="4" fill="black" />
+
+                        <!-- Moon/Sun outline often seen? No, typically just bird -->
+                        <!-- Bird flying -->
+                        <path d="M20,70 Q35,60 50,70 L45,80 Q35,85 25,80 Z" fill="#d99" stroke="black"
+                            stroke-width="0.5" />
+                        <path d="M20,70 Q10,60 20,55" fill="none" stroke="black" stroke-width="1" /> <!-- Wing -->
+                        <circle cx="25" cy="68" r="1.5" fill="black" /> <!-- Eye -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (두견새)</div>
+        </div>
+        <!-- 2. 초단 (Red Ribbon, No Text usually for April, but game logic treats as Chodan group often?) -->
+        <!-- Note: Usually April is just a red ribbon. May/July/Dec have blue/red ribbons. -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M15,0 Q20,30 35,40" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M55,0 Q50,30 35,40" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <!-- Leaves -->
+                        <circle cx="20" cy="15" r="4" fill="black" />
+                        <circle cx="50" cy="15" r="4" fill="black" />
+                        <circle cx="35" cy="50" r="4" fill="black" />
+                        <!-- Ribbon -->
+                        <path d="M20,60 L20,90 L30,95 L40,90 L40,60 L30,55 Z" fill="red" stroke="black"
+                            stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">초단(홍띠)</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M35,0 Q35,60 15,80" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M35,0 Q35,60 55,80" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <circle cx="30" cy="30" r="4" fill="black" />
+                        <circle cx="40" cy="50" r="4" fill="black" />
+                        <circle cx="20" cy="70" r="4" fill="black" />
+                        <circle cx="50" cy="70" r="4" fill="black" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M10,0 Q30,50 35,90" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M60,0 Q40,50 35,90" stroke="black" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <circle cx="20" cy="20" r="4" fill="black" />
+                        <circle cx="50" cy="20" r="4" fill="black" />
+                        <circle cx="35" cy="50" r="4" fill="black" />
+                        <circle cx="35" cy="80" r="4" fill="black" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>5월: 난초 (蘭草)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Bridge & Iris) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Bridge -->
+                        <path d="M0,80 L30,60 L50,60 L70,40" stroke="#b85" stroke-width="8" fill="none" />
+                        <path d="M0,80 L30,60 L50,60 L70,40" stroke="black" stroke-width="0.5" fill="none" />
+                        <!-- Outline effect -->
+                        <!-- Iris Leaves -->
+                        <path d="M10,100 Q15,80 10,60" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M20,100 Q25,80 30,50" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M60,100 Q55,80 60,60" stroke="black" stroke-width="2" fill="none" />
+                        <!-- Flower -->
+                        <circle cx="10" cy="60" r="3" fill="purple" />
+                        <circle cx="30" cy="50" r="3" fill="purple" />
+                        <circle cx="60" cy="60" r="3" fill="purple" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (초)</div>
+        </div>
+        <!-- 2. 초단 (Red Ribbon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Iris Leaves -->
+                        <path d="M35,100 Q15,60 10,30" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M35,100 Q55,60 60,30" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M35,100 L35,20" stroke="black" stroke-width="2" fill="none" />
+                        <!-- Flowers -->
+                        <circle cx="10" cy="30" r="3" fill="purple" />
+                        <circle cx="60" cy="30" r="3" fill="purple" />
+                        <circle cx="35" cy="20" r="3" fill="purple" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="35" width="30" height="15" fill="red" stroke="black" stroke-width="0.5" />
+                        <text x="35" y="45" fill="white" font-size="8" text-anchor="middle">초단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">초단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M20,100 Q15,70 5,40" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M50,100 Q55,70 65,40" stroke="black" stroke-width="2" fill="none" />
+                        <circle cx="5" cy="40" r="3" fill="purple" />
+                        <circle cx="65" cy="40" r="3" fill="purple" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피/쌍피 (Normally 5 is just Pi, but some rules differ. Standard is Pi) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M35,100 Q45,70 55,40" stroke="black" stroke-width="2" fill="none" />
+                        <path d="M35,100 Q25,70 15,40" stroke="black" stroke-width="2" fill="none" />
+                        <circle cx="55" cy="40" r="3" fill="purple" />
+                        <circle cx="15" cy="40" r="3" fill="purple" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>6월: 모란 (牡丹)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Butterfly - Blue/Yellow) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Flower Bush -->
+                        <circle cx="20" cy="60" r="10" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="70" r="12" fill="red" stroke="black" stroke-width="0.5" />
+                        <!-- Leaves -->
+                        <path d="M20,60 L10,80" stroke="black" stroke-width="1.5" />
+                        <path d="M50,70 L60,90" stroke="black" stroke-width="1.5" />
+                        <!-- Butterflies -->
+                        <path d="M20,25 Q30,15 40,25 Q50,35 40,40 Q30,50 20,40 Q10,35 20,25" fill="yellow"
+                            stroke="black" stroke-width="0.5" /> <!-- Butterfly 1 -->
+                        <path d="M50,15 Q60,5 70,15 Q80,25 70,30 Q60,40 50,30 Q40,25 50,15" fill="blue" stroke="black"
+                            stroke-width="0.5" /> <!-- Butterfly 2 -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (나비)</div>
+        </div>
+        <!-- 2. 청단 (Blue Ribbon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Flowers -->
+                        <circle cx="35" cy="50" r="15" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="35" cy="50" r="5" fill="#a00" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="15" width="30" height="15" fill="blue" stroke="black" stroke-width="0.5" />
+                        <text x="35" y="25" fill="white" font-size="8" text-anchor="middle">청단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">청단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Flowers -->
+                        <circle cx="20" cy="40" r="10" fill="red" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="60" r="10" fill="red" stroke="black" stroke-width="0.5" />
+                        <path d="M20,40 L35,100" stroke="black" stroke-width="1.5" />
+                        <path d="M50,60 L35,100" stroke="black" stroke-width="1.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Flowers -->
+                        <circle cx="35" cy="30" r="12" fill="red" stroke="black" stroke-width="0.5" />
+                        <path d="M35,30 L35,100" stroke="black" stroke-width="1.5" />
+                        <path d="M35,60 Q10,70 10,50" fill="none" stroke="green" stroke-width="2" /> <!-- Leaf -->
+                        <path d="M35,80 Q60,90 60,70" fill="none" stroke="green" stroke-width="2" /> <!-- Leaf -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>7월: 홍싸리 (紅萩)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Boar) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Bush -->
+                        <path d="M5,0 Q15,40 35,50" stroke="#d55" stroke-width="3" fill="none" stroke-linecap="round" />
+                        <path d="M65,0 Q55,40 35,50" stroke="#d55" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <circle cx="15" cy="20" r="3" fill="#d55" />
+                        <circle cx="55" cy="20" r="3" fill="#d55" />
+                        <!-- Boar -->
+                        <path d="M15,70 Q25,60 45,70 Q55,75 50,85 Q40,90 20,85 Z" fill="#533" stroke="black"
+                            stroke-width="0.5" />
+                        <circle cx="45" cy="73" r="1.5" fill="black" /><!-- Eye -->
+                        <path d="M15,80 L15,90" stroke="black" stroke-width="1.5" /><!-- Leg -->
+                        <path d="M40,85 L40,95" stroke="black" stroke-width="1.5" /><!-- Leg -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (멧돼지)</div>
+        </div>
+        <!-- 2. 홍단 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M20,0 Q20,30 35,50" stroke="#d55" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M50,0 Q50,30 35,50" stroke="#d55" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M35,50 L35,100" stroke="#d55" stroke-width="2" />
+                        <!-- Ribbon -->
+                        <path d="M20,20 L20,50 L30,55 L40,50 L40,20 L30,15 Z" fill="red" stroke="black"
+                            stroke-width="0.5" transform="rotate(-15 30 35)" />
+                        <text x="30" y="30" fill="white" font-size="8" text-anchor="middle"
+                            transform="rotate(-15 30 35)">홍단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">홍단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M35,0 Q15,40 10,80" stroke="#d55" stroke-width="3" fill="none" />
+                        <path d="M35,0 Q55,40 60,80" stroke="#d55" stroke-width="3" fill="none" />
+                        <circle cx="20" cy="30" r="3" fill="#d55" />
+                        <circle cx="50" cy="30" r="3" fill="#d55" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M10,0 Q30,50 35,90" stroke="#d55" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M60,0 Q40,50 35,90" stroke="#d55" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>8월: 공산 (空山)</h2>
+    <div class="month-container">
+        <!-- 1. 광 (Moon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Sky -->
+                        <rect x="0" y="0" width="70" height="50" fill="#d00" />
+                        <!-- Moon -->
+                        <circle cx="35" cy="25" r="15" fill="white" />
+                        <!-- Mountains -->
+                        <path d="M0,50 L20,30 L40,50 L50,40 L70,60 L70,106 L0,106 Z" fill="black" />
+                        <!-- Gwang Symbol -->
+                        <circle cx="55" cy="85" r="8" fill="red" stroke="white" stroke-width="1" />
+                        <text x="55" y="89" fill="white" font-size="10" text-anchor="middle" font-weight="bold">光</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">광 (공산)</div>
+        </div>
+        <!-- 2. 열끗 (Geese) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Mountains -->
+                        <path d="M0,70 Q35,50 70,70 L70,106 L0,106 Z" fill="black" />
+                        <!-- Geese -->
+                        <path d="M10,20 L20,25 L10,30" stroke="black" stroke-width="1.5" fill="none" />
+                        <path d="M25,35 L35,40 L25,45" stroke="black" stroke-width="1.5" fill="none" />
+                        <path d="M40,25 L50,30 L40,35" stroke="black" stroke-width="1.5" fill="none" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (기러기)</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M0,60 Q35,40 70,60 L70,106 L0,106 Z" fill="black" />
+                        <path d="M0,0 L70,0 L70,20 L0,20 Z" fill="#d00" opacity="0.1" /> <!-- Hint of sky -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M0,80 Q35,60 70,80 L70,106 L0,106 Z" fill="black" />
+                        <path d="M0,40 Q35,20 70,40" stroke="black" stroke-width="1" fill="none"
+                            stroke-dasharray="2,2" /> <!-- Abstract mountain line -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>9월: 국화 (菊)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Sake Cup) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Flower Bush -->
+                        <circle cx="20" cy="50" r="10" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <circle cx="50" cy="30" r="10" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <!-- Leaves -->
+                        <path d="M20,50 L10,80" stroke="black" stroke-width="1.5" />
+                        <!-- Sake Cup -->
+                        <path d="M35,60 L55,60 L50,75 L40,75 Z" fill="red" stroke="black" stroke-width="0.5" />
+                        <ellipse cx="45" cy="60" rx="10" ry="3" fill="#ecc" stroke="black" stroke-width="0.5" />
+                        <text x="45" y="70" font-size="6" text-anchor="middle" fill="white">寿</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (술잔)</div>
+        </div>
+        <!-- 2. 청단 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <circle cx="35" cy="60" r="12" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <path d="M35,60 L35,100" stroke="black" stroke-width="1.5" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="20" width="30" height="15" fill="blue" stroke="black" stroke-width="0.5" />
+                        <text x="35" y="30" fill="white" font-size="8" text-anchor="middle">청단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">청단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <circle cx="25" cy="40" r="10" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <circle cx="45" cy="60" r="10" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <path d="M25,40 L30,100" stroke="black" stroke-width="1.5" />
+                        <path d="M45,60 L40,100" stroke="black" stroke-width="1.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <circle cx="50" cy="30" r="8" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <circle cx="20" cy="80" r="8" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <path d="M50,30 L45,100" stroke="black" stroke-width="1.5" />
+                        <path d="M20,80 L25,100" stroke="black" stroke-width="1.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>10월: 단풍 (楓)</h2>
+    <div class="month-container">
+        <!-- 1. 열끗 (Deer) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Leaves -->
+                        <path d="M10,10 L15,15 L10,20 M15,15 L25,20" stroke="orange" stroke-width="2" />
+                        <circle cx="20" cy="20" r="5" fill="orange" />
+                        <circle cx="50" cy="15" r="5" fill="orange" />
+                        <!-- Deer -->
+                        <path d="M25,50 Q35,40 45,50 L55,60 L55,75 L45,85 L25,75 Z" fill="orange" stroke="black"
+                            stroke-width="0.5" />
+                        <path d="M25,50 L20,40" stroke="black" stroke-width="1" /> <!-- Antler -->
+                        <path d="M30,45 L35,35" stroke="black" stroke-width="1" /> <!-- Antler -->
+                        <circle cx="30" cy="55" r="1.5" fill="black" /> <!-- Eye -->
+                        <path d="M35,80 L35,95" stroke="black" stroke-width="1.5" /> <!-- Leg -->
+                        <path d="M50,80 L50,95" stroke="black" stroke-width="1.5" /> <!-- Leg -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (사슴)</div>
+        </div>
+        <!-- 2. 청단 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Leaves -->
+                        <circle cx="20" cy="60" r="5" fill="orange" />
+                        <circle cx="50" cy="70" r="5" fill="orange" />
+                        <path d="M35,40 L35,100" stroke="black" stroke-width="1" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="20" width="30" height="15" fill="blue" stroke="black" stroke-width="0.5" />
+                        <text x="35" y="30" fill="white" font-size="8" text-anchor="middle">청단</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">청단</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <circle cx="20" cy="30" r="5" fill="orange" />
+                        <circle cx="50" cy="40" r="5" fill="orange" />
+                        <circle cx="35" cy="60" r="5" fill="orange" />
+                        <circle cx="20" cy="80" r="5" fill="orange" />
+                        <path d="M35,50 L35,100" stroke="black" stroke-width="1" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <circle cx="15" cy="20" r="5" fill="orange" />
+                        <circle cx="55" cy="25" r="5" fill="orange" />
+                        <circle cx="35" cy="50" r="5" fill="orange" />
+                        <path d="M35,20 L35,80" stroke="black" stroke-width="1" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>11월: 오동 (梧桐)</h2>
+    <div class="month-container">
+        <!-- 1. 광 (Phoenix) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Leaves (Black Blobs) -->
+                        <path d="M10,80 Q20,70 30,80 Q35,90 20,100 Z" fill="black" />
+                        <path d="M40,80 Q50,70 60,80 Q65,90 50,100 Z" fill="black" />
+                        <path d="M25,60 Q35,50 45,60 Q50,70 35,80 Z" fill="black" />
+                        <!-- Phoenix (Abstract) -->
+                        <path d="M10,20 Q35,0 60,20 L50,40 L20,40 Z" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <path d="M35,5 L35,15" stroke="red" stroke-width="1" />
+                        <circle cx="25" cy="20" r="1.5" fill="black" />
+                        <!-- Gwang Symbol -->
+                        <circle cx="55" cy="85" r="8" fill="red" stroke="white" stroke-width="1" />
+                        <text x="55" y="89" fill="white" font-size="10" text-anchor="middle" font-weight="bold">光</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">광 (봉황)</div>
+        </div>
+        <!-- 2. 쌍피 (Colored) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Leaves  -->
+                        <path d="M10,20 Q20,10 30,20 Q35,30 20,40 Z" fill="black" />
+                        <path d="M40,20 Q50,10 60,20 Q65,30 50,40 Z" fill="black" />
+                        <path d="M25,40 Q35,30 45,40 Q50,50 35,60 Z" fill="black" />
+                        <!-- Bottom Color Block -->
+                        <rect x="15" y="70" width="40" height="30" fill="yellow" stroke="black" stroke-width="1" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">쌍피</div>
+        </div>
+        <!-- 3. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M10,20 Q20,10 30,20 Q35,30 20,40 Z" fill="black" />
+                        <path d="M40,50 Q50,40 60,50 Q65,60 50,70 Z" fill="black" />
+                        <path d="M20,80 Q30,70 40,80 Q45,90 30,100 Z" fill="black" />
+                        <path d="M35,0 L35,106" stroke="black" stroke-width="0.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+        <!-- 4. 피 -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <path d="M35,0 L35,106" stroke="black" stroke-width="0.5" />
+                        <path d="M40,20 Q50,10 60,20 Q65,30 50,40 Z" fill="black" />
+                        <path d="M10,50 Q20,40 30,50 Q35,60 20,70 Z" fill="black" />
+                        <path d="M40,80 Q50,70 60,80 Q65,90 50,100 Z" fill="black" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">피</div>
+        </div>
+    </div>
+
+    <h2>12월: 비 (雨)</h2>
+    <div class="month-container">
+        <!-- 1. 광 (Rain Man) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Willow (Black) -->
+                        <path d="M10,0 L10,60" stroke="black" stroke-width="1" />
+                        <path d="M60,0 L60,50" stroke="black" stroke-width="1" />
+                        <!-- Man -->
+                        <circle cx="35" cy="65" r="5" fill="#fac" /> <!-- Face -->
+                        <path d="M35,70 L35,90" stroke="blue" stroke-width="4" /> <!-- Body -->
+                        <path d="M25,55 Q35,45 45,55 L45,60 L25,60 Z" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <!-- Hat/Umbrella Base -->
+                        <path d="M35,45 L35,55" stroke="black" stroke-width="1" />
+                        <path d="M20,55 L50,55" stroke="black" stroke-width="1" /> <!-- Umbrella -->
+                        <!-- Frog (Small green blob) -->
+                        <ellipse cx="15" cy="90" rx="5" ry="3" fill="green" />
+                        <!-- Gwang Symbol -->
+                        <circle cx="55" cy="85" r="8" fill="red" stroke="white" stroke-width="1" />
+                        <text x="55" y="89" fill="white" font-size="10" text-anchor="middle" font-weight="bold">光</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">광 (비)</div>
+        </div>
+        <!-- 2. 열끗 (Bird) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Willow -->
+                        <path d="M10,0 L10,50" stroke="black" stroke-width="1" />
+                        <path d="M30,0 L30,60" stroke="black" stroke-width="1" />
+                        <path d="M50,0 L50,40" stroke="black" stroke-width="1" />
+                        <!-- Bird (Swallow) -->
+                        <path d="M35,70 Q45,80 55,70 L50,60 L30,65 Z" fill="yellow" stroke="black" stroke-width="0.5" />
+                        <circle cx="32" cy="67" r="1.5" fill="black" />
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">열끗 (제비)</div>
+        </div>
+        <!-- 3. 홍단 (Rain Ribbon) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Willow -->
+                        <path d="M15,0 L15,40" stroke="black" stroke-width="1" />
+                        <path d="M45,0 L45,40" stroke="black" stroke-width="1" />
+                        <!-- Ribbon -->
+                        <rect x="20" y="50" width="30" height="15" fill="red" stroke="black" stroke-width="0.5" />
+                        <!-- Often Rain ribbon has no text or distinctive curve, using standard for consistency -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">홍단 (띠)</div>
+        </div>
+        <!-- 4. 쌍피 (Bi-Pi) -->
+        <div>
+            <div class="card">
+                <div class="card-face">
+                    <svg viewBox="0 0 70 106">
+                        <!-- Willow/Ribs -->
+                        <path d="M10,0 L10,106" stroke="black" stroke-width="1" />
+                        <path d="M60,0 L60,106" stroke="black" stroke-width="1" />
+                        <path d="M10,20 L60,20" stroke="black" stroke-width="1" />
+                        <path d="M10,80 L60,80" stroke="black" stroke-width="1" />
+                        <rect x="25" y="40" width="20" height="30" fill="gray" stroke="black" stroke-width="0.5" />
+                        <!-- Dead/Ghost Card look -->
+                    </svg>
+                </div>
+            </div>
+            <div class="card-label">쌍피</div>
+        </div>
+    </div>
+</body>
+
+</html>

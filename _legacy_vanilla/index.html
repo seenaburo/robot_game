@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Sliding Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="logo-container">
+                <i class="fa-solid fa-puzzle-piece logo-icon"></i>
+                <h1>Sliding Puzzle <span class="highlight">Adventure</span></h1>
+            </div>
+            <p class="subtitle">Upload a character & solve the puzzle!</p>
+        </header>
+
+        <!-- Game Controls -->
+        <div class="controls-panel">
+            <div class="upload-zone" id="dropZone">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div class="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <p>Drop your character here</p>
+                    <span class="upload-subtext">or click to browse</span>
+                </div>
+            </div>
+
+            <div class="difficulty-selector">
+                <label>Grid Size</label>
+                <div class="grid-options">
+                    <button class="grid-btn active" data-size="3">3x3</button>
+                    <button class="grid-btn" data-size="4">4x4</button>
+                    <button class="grid-btn" data-size="5">5x5</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <main class="game-area" id="gameArea" style="display: none;">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-label">MOVES</span>
+                    <span class="stat-value" id="moveCounter">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">TIME</span>
+                    <span class="stat-value" id="timer">00:00</span>
+                </div>
+                <button class="hint-btn" id="hintBtn">
+                    <i class="fa-regular fa-eye"></i> View Original
+                </button>
+            </div>
+
+            <div class="puzzle-container">
+                <div class="puzzle-board" id="puzzleBoard"></div>
+                <div class="original-preview" id="originalPreview">
+                    <img id="previewImage" src="" alt="Original">
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-btn restart" id="restartBtn">
+                    <i class="fa-solid fa-rotate-right"></i> Shuffle
+                </button>
+                <button class="action-btn new-game" id="newGameBtn">
+                    <i class="fa-solid fa-image"></i> New Photo
+                </button>
+            </div>
+        </main>
+
+        <!-- Win Modal -->
+        <div class="modal-overlay" id="winModal">
+            <div class="modal-content">
+                <div class="modal-icon">🎉</div>
+                <h2>Puzzle Solved!</h2>
+                <p>Amazing job! You completed the puzzle.</p>
+                <div class="modal-stats">
+                    <div class="modal-stat">
+                        <span class="ms-label">Time</span>
+                        <span class="ms-value" id="finalTime">00:00</span>
+                    </div>
+                    <div class="modal-stat">
+                        <span class="ms-label">Moves</span>
+                        <span class="ms-value" id="finalMoves">0</span>
+                    </div>
+                </div>
+                <button class="modal-btn" id="playAgainBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
